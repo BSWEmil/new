@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ernährungstracker – Ziel & Diagramm</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <h1>Ernährungstracker</h1>
+        <nav class="nav-tabs" aria-label="Seiten">
+          <a href="index.html">Einträge</a>
+          <a class="active" href="plan.html">Ziel &amp; Diagramm</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <p class="subtitle">Vergleiche dein heutiges Essen mit deinem Tagesziel.</p>
+
+      <section class="card">
+        <h2>Tagesziel einstellen</h2>
+        <form id="goalForm" class="meal-form">
+          <label>Kalorien-Ziel (kcal)<input type="number" id="goalCalories" min="0" step="1" value="2200" required /></label>
+          <label>Protein-Ziel (g)<input type="number" id="goalProtein" min="0" step="1" value="140" required /></label>
+          <label>Kohlenhydrate-Ziel (g)<input type="number" id="goalCarbs" min="0" step="1" value="250" required /></label>
+          <label>Fett-Ziel (g)<input type="number" id="goalFat" min="0" step="1" value="70" required /></label>
+          <button type="submit">Ziele speichern</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Diagramm: Ist / Soll</h2>
+        <canvas id="goalChart" width="760" height="320" aria-label="Vergleich Ist zu Soll"></canvas>
+      </section>
+    </main>
+
+    <script src="plan.js"></script>
+  </body>
+</html>
