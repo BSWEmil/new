@@ -8,7 +8,9 @@
   --border: #e4e8ef;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
